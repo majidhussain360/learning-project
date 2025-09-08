@@ -1,5 +1,5 @@
-import { UserService } from '../../services/userservice';
-import { authOptions } from '../auth/[...nextauth]/options';
+import { UserService } from '../../../services/userservice';
+import { authOptions } from '../../auth/[...nextauth]/options';
 import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 
