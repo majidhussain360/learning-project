@@ -1,9 +1,9 @@
 import { UserService } from '../../../services/userservice';
 import { authOptions } from '../../auth/[...nextauth]/options';
 import { NextRequest, NextResponse } from 'next/server';
-import { getServerSession } from 'next-auth';
+import { getServerSession } from "next-auth/next";
 
-export async function GET(request: NextRequest, context: { params: { id: string } }) {
+export async function GET(request: NextRequest, context: any) {
     try {
         const session = await getServerSession(authOptions);
         if (!session) {
@@ -17,7 +17,7 @@ export async function GET(request: NextRequest, context: { params: { id: string 
     }
 }
 
-export async function PATCH(request: NextRequest, context: { params: { id: string } }) {
+export async function PATCH(request: NextRequest, context: any) {
     try {
         const session = await getServerSession(authOptions);
         if (!session) {
@@ -32,7 +32,7 @@ export async function PATCH(request: NextRequest, context: { params: { id: strin
     }
 }
 
-export async function DELETE(request: NextRequest, context: { params: { id: string } }) {
+export async function DELETE(request: NextRequest, context: any) {
     try {
         const session = await getServerSession(authOptions);
         if (!session) {
