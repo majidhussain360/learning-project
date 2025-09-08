@@ -1,7 +1,7 @@
-import {UserService} from '../../services/userservice';
-import { NextRequest,NextResponse } from 'next/server';
-import { getServerSession } from 'next-auth';
+import { UserService } from '../../services/userservice';
 import { authOptions } from '../auth/[...nextauth]/options';
+import { NextRequest, NextResponse } from 'next/server';
+import { getServerSession } from 'next-auth';
 
 export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
     try {
